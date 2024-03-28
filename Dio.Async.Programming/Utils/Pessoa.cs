@@ -6,10 +6,25 @@ public class Pessoa
     public string Nome { get; set; } = string.Empty;
     public int Idade { get; set; }
 
+    public void IncrementarIdadeLock()
+    {
+        lock(this)
+        {
+            Idade++;
+        }
+
+ 
+    }
+
     public void IncrementarIdade()
     {
-        Idade++;
+     
+       Idade++;
+     
+
+
     }
+
 
     public override string ToString()
     {
